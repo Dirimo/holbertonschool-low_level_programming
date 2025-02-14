@@ -1,2 +1,2 @@
 #!/bin/bash
-export gcc -E  CFILE=0-main.c 
+[ -z "$CFILE" ] && { echo "Error: CFILE variable is not set."; exit 1; } || cpp "$CFILE" -o c
