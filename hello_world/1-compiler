@@ -1,2 +1,2 @@
-#!/bin/bash
-rm -rf 1-main.o ; export CFILE=1-main.c ; ./1-compiler ; cat 1-main.o ; rm 1-main.o
+#!/bin/bash 
+gcc -c $CFILE -o 1-main.o 
