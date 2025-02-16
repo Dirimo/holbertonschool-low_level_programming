@@ -4,7 +4,7 @@
  *
  * Return: 0
  */
-gcc -o size32 -m32 -std=gnu89  6-size.c
+
 int main(void)
 {
 	char a;
