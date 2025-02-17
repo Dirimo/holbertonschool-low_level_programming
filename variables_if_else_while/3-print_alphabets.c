@@ -8,9 +8,8 @@
  */
 int main(void)
 {
-    putchar('a'); // Prints lowercase 'a'
-    putchar('A'); // Prints uppercase 'A'
-    putchar('\n');  // Prints a newline
-
-    return (0);
+putchar('a');	/* Prints lowercase 'a'*/
+putchar('A');	/* Prints uppercase 'A'*/
+putchar('\n');	/* Prints a newline */
+return (0);
 }
