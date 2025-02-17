@@ -19,7 +19,7 @@ alphabet[i + 26] = 'A' + i;
 alphabet[52] = '\n'; /* Add newline character at the end */
 /* Print the array using putchar */
 for (i = 0; i < 53; i++)
-{ 
+{
 putchar(alphabet[i]);
 }
 return (0);
