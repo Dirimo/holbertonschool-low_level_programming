@@ -8,18 +8,15 @@
  */
 int main(void)
 {
-    char letter;
-
-    /* Print lowercase alphabet excluding 'q' and 'e' */
-    for (letter = 'a'; letter <= 'z'; letter++)
-    {
-        if (letter != 'q' && letter != 'e')
-        {
-            putchar(letter);
-        }
-    }
-
-    putchar('\n'); /* Add newline character at the end */
-
-    return (0);
+char letter;
+/* Print lowercase alphabet excluding 'q' and 'e' */
+for (letter = 'a'; letter <= 'z'; letter++)
+{
+if (letter != 'q' && letter != 'e')
+{
+putchar(letter);
+}
+}
+putchar('\n'); /* Add newline character at the end */
+return (0);
 }
