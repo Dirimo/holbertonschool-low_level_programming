@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int main() 
+int main(void)
 {
     for (char ch = 'a'; ch <= 'z'; ++ch)
-    {
-        putchar(ch);
     }
-    putchar('\n');  // Print a new line after the alphabet
+putchar(ch);
+    }
+putchar('\n');  //Print a new line after the alphabet//
     return 0;
 }
