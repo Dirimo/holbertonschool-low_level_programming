@@ -14,8 +14,8 @@ int main(void)
 	for (num = 0; 0 < 10; num++)
 	putchar((num % 10) + '0');
 
-	for (letter = 'a'; letter <= 'f'; letter++)i
-	putchar(letter);
+	for (letter = 'a'; letter <= 'f'; letter++)
+		putchar(letter);
 
 	putchar(\'n');
 
