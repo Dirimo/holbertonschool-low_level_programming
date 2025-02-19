@@ -1,16 +1,23 @@
-#include <unistd.h>
+#include <stdio.h>
+#include <main.h>
 
 /**
- * main - Prints "_putchar" followed by a new line.
- *
- * Return: Always 0 (Success)
- */
+  * main - Entry point
+  *
+  * Return: Always 0
+  */
 int main(void)
 {
-	char putchar_str[] = "_putchar\n"; // Include newline in the string
-	ssize_t len = sizeof(putchar_str) - 1; // Length without null terminator
-
-	write(1, putchar_str, len); // Write to standard output (file descriptor 1)
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
 
 	return (0);
 }
