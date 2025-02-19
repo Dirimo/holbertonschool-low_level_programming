@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <unistd.h>
 
 /**
@@ -8,15 +7,10 @@
  */
 int main(void)
 {
-	char putchar_str[] = "_putchar";
-	int i = 0;
+	char putchar_str[] = "_putchar\n"; // Include newline in the string
+	ssize_t len = sizeof(putchar_str) - 1; // Length without null terminator
 
-	while (putchar_str[i] != '\0')
-	{
-		putchar(putchar_str[i]);
-		i++;
-	}
-	putchar('\n');
+	write(1, putchar_str, len); // Write to standard output (file descriptor 1)
 
 	return (0);
 }
