@@ -1,25 +1,51 @@
-#include "stdio.h"
+#include "main.h"
 
 /**
- * print_number - Prints an integer using _putchar.
- * @n: The integer to print.
- *
- * Return: void
- */
-void print_number(int n)
+  * print_times_table - Prints a multiplication table up to param
+  * @n: The number to be treated
+  *
+  * Return: Number matrix
+  */
+void print_times_table(int n)
 {
-        unsigned int num;
+	int x, y, z;
 
-        if (n < 0)
-        {
-                _putchar('-');
-                num = -n;
-        }
-        else
-                num = n;
-
-        if (num / 10)
-                print_number(num / 10);
-
-        _putchar((num % 10) + '0');
+	if (n >= 0 && n <= 14)
+	{
+		for (x = 0; x <= n; x++)
+		{
+			for (y = 0; y <= n; y++)
+			{
+				z = x * y;
+				if (z > 99)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else if (z > 9)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar(32);
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else
+				{
+					if (y != 0)
+					{
+						_putchar(',');
+						_putchar(32);
+						_putchar(32);
+						_putchar(32);
+					}
+					_putchar(z + '0');
+				}
+			}
+			_putchar('\n');
+		}
+	}
 }
