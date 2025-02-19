@@ -8,7 +8,7 @@
  *              After printing all letters, it prints a new line.
  */
 void print_alphabet(void)
-{
+
     char letter;
 
     for (letter = 'a'; letter <= 'z'; letter++)
@@ -16,7 +16,6 @@ void print_alphabet(void)
         putchar(letter);
     }
     putchar('\n');
-}
 
 /**
  * main - Entry point of the program.
