@@ -29,7 +29,7 @@ int main(void)
 					putchar(y);
 					putchar(z);
 					putchar(p);
-					if (x != '6' || y != '7' || z != '8' || p != '9' )
+					if (x != '6' || y != '7' || z != '8' || p != '9')
 					{
 						putchar(',');
 						putchar(' ');
