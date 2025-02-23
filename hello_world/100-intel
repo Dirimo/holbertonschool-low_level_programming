@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -masm=intel $CFILE -s 100-main.s  
+gcc -S -masm=intel "$CFILE" -o "${CFILE%.c}.s"
