@@ -1,18 +1,16 @@
 #include "main.h"
 
 /**
- * Write a function that multplies
- * two integers
- * 
+ * mul - Multiplies two integers
+ * @a: The first integer
+ * @b: The second integer
  *
+ * Return: The result of the multiplication
+ *
+ * Description: This function takes two integers as input and
+ * returns their product.
  */
-
-int mul(int a, int b);
+int mul(int a, int b)
 {
-	int a = 9
-		int b = 7
-
-		printf( "a * b \n");
-
-	return (0);
+    return (a * b);
 }
