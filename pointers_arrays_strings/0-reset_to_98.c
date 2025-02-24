@@ -1,20 +1,15 @@
+#include <stdio.h>
 #include "main.h"
 
-/**
- * write the function the takes a pointer to an int as
- * parameter and updates the value it points to 
- * use prototype  void reset_to_98(int *n);
- *
- */
+int main(void) {
+    int my_number = 42;
+    int *ptr = &my_number;  // ptr now points to my_number
 
-void reset_to_98(int *n);
-{
-	int n;
+    printf("Before: my_number = %d\n", my_number); // Output: Before: my_number = 42
 
-    	n = 98;
-	printf("n=%d\n", n);
- 	reset_to_98(&n);
-	printf("n=%d\n", n);
-    
-	return (0);
+    reset_to_98(ptr);  // Call the function, passing the pointer
+
+    printf("After: my_number = %d\n", my_number);  // Output: After: my_number = 98
+
+    return (0);
 }
