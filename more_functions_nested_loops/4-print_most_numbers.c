@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /* Prints the numbers, from 0 to 9
  * 
