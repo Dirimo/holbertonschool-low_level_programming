@@ -1,12 +1,11 @@
 #include "main.h"
 
-/** Prints the numbers, from 0 to 9
-* 
-* do not print 2 and 4
-*
-*
-*/
-
+/**
+ * print_most_numbers - Prints numbers from 0 to 9, excluding 2 and 4
+ *
+ * Description: This function prints single digit numbers from 0 to 9,
+ * but does not print 2 and 4. It uses _putchar to print characters.
+ */
 void print_most_numbers(void)
 {
 	char number;
