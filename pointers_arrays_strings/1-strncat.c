@@ -9,24 +9,13 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0, j = 0;
+	int index = 0, dest_len = 0;
 
-	/* Find the end of the destination string */
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
+	while (dest[index++])
+		dest_len++;
 
-	/* Copy the source string to the end of the destination string */
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-
-	/* Add the null terminator to the end of the concatenated string */
-	dest[i] = '\0';
+	for (index = 0; src[index] && index < n; index++)
+		dest[dest_len++] = src[index];
 
 	return (dest);
 }
