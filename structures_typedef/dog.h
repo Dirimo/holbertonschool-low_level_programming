@@ -1,5 +1,3 @@
-#include "dog.h"
-#include <stdio.h>
 /**
  * struct dog - Structure representing a dog.
  *
@@ -11,9 +9,9 @@
  * attributes of a dog, including its name, age,
  * and the name of its owner.
  */
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} dog_t;
+}; 
