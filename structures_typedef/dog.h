@@ -1,3 +1,5 @@
+#include "dog.h"
+#include <stdlib.h>
 /**
  * struct dog - Structure representing a dog.
  *
