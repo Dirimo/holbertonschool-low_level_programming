@@ -21,42 +21,40 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i = 0;
 	char *str;
-	char c;
-	int n;
-	float f;
+	char separator[4] = ""; /* Holds ", " or "" */
 
 	va_start(args, format);
 
-	while (format && format[i])
+	if (format)
 	{
-		if (i > 0)
-			printf(", ");
-
-		switch (format[i])
+		while (format[i])
 		{
-			case 'c':
-				c = va_arg(args, int);
-				printf("%c", c);
-				break;
-			case 'i':
-				n = va_arg(args, int);
-				printf("%d", n);
-				break;
-			case 'f':
-				f = (float)va_arg(args, double);
-				printf("%f", f);
-				break;
-			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s", str);
-				break;
-			default:
-				i++;
-				continue;
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", separator, va_arg(args, int));
+					break;
+				case 'i':
+					printf("%s%d", separator, va_arg(args, int));
+					break;
+				case 'f':
+					printf("%s%f", separator, (float)va_arg(args, double));
+					break;
+				case 's':
+					str = va_arg(args, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", separator, str);
+					break;
+				default:
+					i++;
+					continue; /* Skip to the next char in format */
+			}
+
+			/* Set separator to ", " after the first argument */
+			sprintf(separator, ", ");
+			i++;
 		}
-		i++;
 	}
 
 	va_end(args);
