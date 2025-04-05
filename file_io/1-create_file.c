@@ -3,25 +3,25 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+#include <sys/stat.h>
 
 /**
- * append_text_to_file - Appends text at the end of a file.
- * @filename: The name of the file.
- * @text_content: The NULL terminated string to add at the end of the file.
+ * create_file - Creates a file.
+ * @filename: The name of the file to create.
+ * @text_content: A NULL terminated string to write to the file.
  *
- * Return: 1 on success and -1 on failure.
- *         -1 if the file does not exist or if you do not have the required
- *            permissions to write the file.
+ * Return: 1 on success, -1 on failure.
  */
-int append_text_to_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t bytes_written;
+	ssize_t bytes_written = 0;
+	mode_t file_permissions = S_IRUSR | S_IWUSR; /* rw------- */
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_APPEND); /* Open in append mode */
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, file_permissions);
 
 	if (fd == -1)
 		return (-1);
